@@ -12,8 +12,8 @@ PS: Your Wordpress website requires a template that uses [Bootstrap](https://get
 
 <br />
 <img src="https://github.com/mb-dev-75/mb-latest-music/blob/main/screenshots/screenshot.png" />
-<img src="https://github.com/mb-dev-75/mb-latest-music/blob/main/screenshot_mobile.png" />
-<img src="https://github.com/mb-dev-75/mb-latest-music/blob/main/screenshot_customized.png" />
+<img src="https://github.com/mb-dev-75/mb-latest-music/blob/main/screenshots/screenshot_mobile.png" />
+<img src="https://github.com/mb-dev-75/mb-latest-music/blob/main/screenshots/screenshot_customized.png" />
 <img src="https://github.com/mb-dev-75/mb-latest-music/blob/main/screenshots/back.png" />
 <br />
 
