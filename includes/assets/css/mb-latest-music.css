@@ -1,0 +1,261 @@
+:root {
+  --col-1: 85, 85, 85; /* rgb(85, 85, 85) = #555 */
+  --col-2: 102, 0, 255; /* rgb(102, 0, 255) = #6600ff */
+
+  --time-duration: #d6d8fa;
+  --background: #111;
+  --artist-name: #fff;
+  --album-name: #aaa;
+
+  --main: rgba(var(--col-2), 1);
+  --main-30: rgba(var(--col-2), 0.3);
+  --wave: rgba(var(--col-1), 1);
+  --wave-50: rgba(var(--col-1), 0.5);
+  --wave-20: rgba(var(--col-1), 0.2);
+}
+.widget_mb-latest-music_widget {
+  position: relative;
+  padding: 5px 0 100px 0 !important;
+  background: var(--background);
+}
+.widget_mb-latest-music_widget .widget-title {
+  color: white !important;
+  margin-bottom: 95px;
+}
+
+/* Album cover */
+.widget_mb-latest-music_widget .mb-lm-cover {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.widget_mb-latest-music_widget .mb-lm-cover img {
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Cover overlay */
+.widget_mb-latest-music_widget .mb-lm-cover .mb-lm-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 15px;
+  bottom: 0;
+  width: calc(100% - 30px);
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.widget_mb-latest-music_widget .mb-lm-cover:hover .mb-lm-overlay {
+  display: flex;
+}
+.widget_mb-latest-music_widget .mb-lm-cover .mb-lm-overlay svg {
+  width: 100px;
+  height: 100px;
+  fill: var(--main-col);
+  cursor: pointer;
+}
+
+/* Play/Pause button */
+.widget_mb-latest-music_widget .mb-lm-cover .mb-lm-overlay svg > g.svg-play {
+  visibility: visible;
+}
+.widget_mb-latest-music_widget .mb-lm-cover .mb-lm-overlay svg > g.svg-pause {
+  visibility: hidden;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-cover
+  .mb-lm-overlay
+  svg.flip
+  > g.svg-play {
+  visibility: hidden;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-cover
+  .mb-lm-overlay
+  svg.flip
+  > g.svg-pause {
+  visibility: visible;
+}
+
+/* Track */
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-play-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-play-title
+  .mb-lm-track-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: var(--main-col);
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+/* Album */
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-play-title
+  .mb-lm-album-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: var(--album-name);
+  margin: 0;
+}
+
+/* Artist */
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-play-title
+  .mb-lm-track-artist {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--artist-name);
+  margin-top: 0;
+}
+
+/* Audio Wave */
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-wave {
+  position: relative;
+}
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-wave #waveform {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* Time duration */
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-wave .waveform__counter,
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-wave .waveform__duration {
+  position: absolute;
+  z-index: 99;
+  top: 55%;
+  font-size: 1rem;
+  color: var(--time-duration);
+  opacity: 0.7;
+}
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-wave .waveform__counter {
+  left: 5px;
+}
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-wave .waveform__duration {
+  visibility: hidden;
+  right: 5px;
+}
+
+/* Streaming platform icons */
+.widget_mb-latest-music_widget .mb-lm-player .mb-lm-buy-stream {
+  width: 100%;
+  margin-top: 10px;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker {
+  opacity: 0.8;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker:hover {
+  opacity: 1;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker.apple {
+  background-image: url('../images/apple-music.svg');
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker.spotify {
+  background-image: url('../images/spotify.svg');
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker.bandcamp {
+  background-image: url('../images/bandcamp.svg');
+}
+.widget_mb-latest-music_widget
+  .mb-lm-player
+  .mb-lm-buy-stream
+  .mb-lm-buy-sticker.deezer {
+  background-image: url('../images/deezer.svg');
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .widget_mb-latest-music_widget
+    .mb-lm-player
+    .mb-lm-buy-stream
+    .mb-lm-buy-sticker {
+    background-size: 50%;
+  }
+  .widget_mb-latest-music_widget
+    .mb-lm-player
+    .mb-lm-buy-stream
+    .mb-lm-buy-sticker.apple {
+    background-image: url('../images/apple-music_small.svg');
+  }
+  .widget_mb-latest-music_widget
+    .mb-lm-player
+    .mb-lm-buy-stream
+    .mb-lm-buy-sticker.spotify {
+    background-image: url('../images/spotify_small.svg');
+  }
+  .widget_mb-latest-music_widget
+    .mb-lm-player
+    .mb-lm-buy-stream
+    .mb-lm-buy-sticker.bandcamp {
+    background-image: url('../images/bandcamp_small.svg');
+  }
+  .widget_mb-latest-music_widget
+    .mb-lm-player
+    .mb-lm-buy-stream
+    .mb-lm-buy-sticker.deezer {
+    background-image: url('../images/deezer_small.svg');
+  }
+}
+@media (max-width: 991px) {
+  .widget_mb-latest-music_widget .mb-lm-player .mb-lm-play-title {
+    margin: 40px 0;
+  }
+  .widget_mb-latest-music_widget
+    .mb-lm-player
+    .mb-lm-buy-stream
+    .mb-lm-buy-sticker:nth-child(-n + 2) {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .widget_mb-latest-music_widget .mb-lm-cover .mb-lm-overlay {
+    left: 10px;
+    width: calc(100% - 20px);
+  }
+}
